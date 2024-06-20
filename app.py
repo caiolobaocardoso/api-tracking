@@ -13,7 +13,7 @@ rastreio.append[0,1]
 for codigo in rastreio:
   url = "https://api.17track.net/track/v2.2/register"
   payload =  [
-    {
+                {
       "number": f"{codigo}",
       "auto_detection": True,
       "lang": "en"
