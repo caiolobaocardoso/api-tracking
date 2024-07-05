@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 
 
-path_excel = 'C:\Users\042000026\Documents\workspace\api-correios\17track\correios.xlsx'
+path_excel = r'C:\Users\042000026\Documents\workspace\api-correios\17track\correios.xlsx'
 rastreio = []
 df = pd.read_excel(path_excel, sheet_name="POSTADO")
 list_code_track = df['CODIGO'].values.tolist()
@@ -22,7 +22,7 @@ for codigo in rastreio:
 
   headers = {
       "content-type": "application/json",
-      "17token": "6D2CF6D71A34BEACBE2090A0A44CD6D4"
+      "17token": "E04997BA7983691F681C6DAA8DFDAC2C"
   }
   response = requests.request("POST", url, json=payload, headers=headers)
 
