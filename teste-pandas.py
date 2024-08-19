@@ -1,10 +1,10 @@
 import pandas as pd
 
-path_excel = 'C:/Users/042000026/Documents/workspace/api-correios/17track/correios.xlsx'
+path_excel = 'codigos.xlsx'
 
 rastreio = []
 df = pd.read_excel(path_excel, sheet_name="POSTADO")
-list_code_track = df['CODIGO'].values.tolist()
-rastreio.append(0)
+list_code_track = df.values.tolist()
+rastreio.append(list_code_track)
 
 print(rastreio)
